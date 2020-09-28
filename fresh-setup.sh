@@ -74,20 +74,15 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 usermod -aG docker $user_name
 
-echo "######################  Cleaning Up  ######################"
-rm requirements.txt
-rm README.md
-rm package-lock.json
-rm get-docker.sh
-rm -rf node_modules  
-rm -- "$0"
 
 
 echo "######################  Setting up Aliases  ######################"
 alias ll="ls -lah"
 
 echo "######################  Installing Oh-my-ZSH  and plugins ######################"
-echo "run zshenv.sh after to get zsh setup"
+echo "Run zshenv.sh after to get zsh setup and cleanup"
+curl https://raw.githubusercontent.com/NiklasTreml/setup-script/master/zshenv.sh -o zshenv.sh
+chmod 766 zshenv.sh
 
 apt install zsh -y && \
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
