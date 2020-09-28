@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-sudo apt-get install curl
+sudo apt-get install curl -y
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 xargs -a apt-packages.txt sudo apt-get install -y
 
