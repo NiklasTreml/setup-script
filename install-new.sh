@@ -1,12 +1,5 @@
 #!/bin/sh
-echo "Enter git Username"
-read git_user
 
-echo "Enter git E-Mail"
-read git_email
-
-echo "Enter git password"
-read git_pw
 
 
 echo "######################  Getting Updates  ######################"
@@ -35,6 +28,9 @@ sudo snap install discord --classic
 
 echo "######################  Getting Python Packages  ######################"
 pip3 install -r requirements.txt
+
+echo "######################  Doing git stuff  ######################"
+git config --global credential.helper store
 
 echo "######################  Getting Docker  ######################"
 curl -fsSL https://get.docker.com -o get-docker.sh
