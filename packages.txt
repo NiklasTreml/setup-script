@@ -1,4 +1,5 @@
 snapd
+git-all
 curl
 vim
 python3.8
