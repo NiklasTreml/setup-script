@@ -40,3 +40,8 @@ echo "######################  Getting Docker  ######################"
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
+
+echo "######################  Install Oh-my-ZSH  ######################"
+sudo apt install zsh
+sudo chsh -s $(which zsh)
+sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
