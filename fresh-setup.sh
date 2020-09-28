@@ -74,14 +74,6 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 usermod -aG docker $user_name
 
-echo "######################  Install Oh-my-ZSH  ######################"
-apt install zsh -y
-chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo "######################  Setting up Aliases  ######################"
-alias ll="ls -lah"
-
 echo "######################  Cleaning Up  ######################"
 rm requirements.txt
 rm README.md
@@ -91,6 +83,19 @@ rm -rf node_modules
 rm -- "$0"
 
 if [ "$USER" != "$user_name" ];then
+
+echo "######################  Installing Oh-my-ZSH  and plugins ######################"
+export ZSH_THEME=cloud
+apt install zsh -y
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+curl -o ~/.zshrc 
+echo "######################  Setting up Aliases  ######################"
+alias ll="ls -lah"
+
 
 echo "######################  User will now switch to $user_name  ######################"
 su $user_name
