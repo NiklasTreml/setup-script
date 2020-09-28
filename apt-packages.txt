@@ -1,7 +1,0 @@
-snapd
-git-all
-wget
-vim
-python3.8
-python3-pip
-nodejs

@@ -1,9 +1,20 @@
-#!/bin/bash
+#!/bin/sh
+
 echo "######################  Getting Updates  ######################"
 sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt update
 
 echo "######################  Getting apt packages  ######################"
-xargs -a apt-packages.txt sudo apt-get install -y
+
+
+sudo apt-get install snapd -y
+sudo apt-get install git-all -y
+sudo apt-get install wget -y
+sudo apt-get install vim -y
+sudo apt-get install python3.8 -y
+sudo apt-get install python3-pip -y
+sudo apt-get install nodejs -y
+
 
 echo "######################  Getting NodeJS  ######################"
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
