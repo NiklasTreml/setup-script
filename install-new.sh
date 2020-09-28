@@ -7,8 +7,6 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt update
 
 echo "######################  Getting apt packages  ######################"
-
-
 sudo apt-get install snapd -y
 sudo apt-get install git-all -y
 sudo apt-get install wget -y
@@ -42,6 +40,16 @@ sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 
 echo "######################  Install Oh-my-ZSH  ######################"
-sudo apt install zsh
+sudo apt install zsh -y
 sudo chsh -s $(which zsh)
 sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "######################  Setting up Aliases  ######################"
+alias ll="ls -lah"
+
+echo "######################  Cleaning Up  ######################"
+rm requirements.txt
+rm RANDME.md
+rm -- "$0"
+
+echo "######################  DONE!!  ######################
