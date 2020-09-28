@@ -1,5 +1,7 @@
 snapd
 git-all
-curl
+wget
 vim
 python3.8
+python3-pip
+nodejs
