@@ -1,5 +1,5 @@
 #!/bin/bash
 
 apt-get update
-xargs -a packages.txt sudo apt-get install
-#cat snap-packages.txt | xargs sudo snap install
+xargs -a apt-packages.txt sudo apt-get install
+xargs -a snap-packages.txt sudo snap install
