@@ -11,6 +11,7 @@ sudo snap install code --classic
 sudo snap install spotify --classic
 sudo snap install discord --classic
 
+pip3 install -r requirements.txt
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
