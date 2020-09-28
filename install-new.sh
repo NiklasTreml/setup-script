@@ -1,4 +1,13 @@
 #!/bin/sh
+echo "Enter git Username"
+read git_user
+
+echo "Enter git E-Mail"
+read git_email
+
+echo "Enter git password"
+read git_pw
+
 
 echo "######################  Getting Updates  ######################"
 sudo apt-get update -y && sudo apt-get upgrade -y
