@@ -3,7 +3,6 @@
 apt-get update
 sudo apt-get install curl
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-add-repository --yes --update ppa:ansible/ansible
 xargs -a apt-packages.txt sudo apt-get install -y
 
 sudo snap install code --classic
