@@ -90,7 +90,9 @@ rm get-docker.sh
 rm -rf node_modules  
 rm -- "$0"
 
-echo "######################  User will now switch to $user_name  ######################"
+if [ "$USER" != "$user_name" ];then
 
+echo "######################  User will now switch to $user_name  ######################"
 su $user_name
+fi
 echo "######################  DONE!!  ######################"
