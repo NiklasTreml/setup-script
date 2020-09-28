@@ -12,6 +12,9 @@ or with curl
 
 # Summary of what this script will do:
 
+## Important
+This script is intended to be run as root on a fresh install of ubuntu, it will ask for user to create, which will also be added to the group docker.
+
 ### Software Installs
 
 - apt-get update and apt-get upgrade as well as apt update
@@ -50,9 +53,10 @@ or with curl
 - brain.js
 - p5
 - ml5
-###Miscellaneous
+### Miscellaneous
 - ZSH
 - Oh my ZSH
 - Docker
-- Adds the executing user to group `docker`
+- Creates and adds a user to the group `docker`
 - git config --global credential.helper store
+### After the execution the script should delete all the files it created, including itself

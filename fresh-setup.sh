@@ -3,6 +3,25 @@
 #wget https://raw.githubusercontent.com/NiklasTreml/setup-script/master/fresh-setup.sh && sudo chmod a+x fresh-setup.sh && sudo ./fresh-setup.sh
 #or with curl
 #curl https://raw.githubusercontent.com/NiklasTreml/setup-script/master/fresh-setup.sh -o fresh-setup.sh && sudo chmod a+x fresh-setup.sh && sudo ./fresh-setup.sh
+echo "######################  Adding User  ######################"
+
+echo "Create a new user? Press 'n' to use the current user and add the current user to group docker "
+echo "Pressing 'y' will add the new user to sudo and docker"
+echo "[y/n]"
+read choice
+
+if [ "$choice" = "y" ]; then
+
+echo "Enter Username"
+
+read user_name
+adduser $user_name
+usermod -aG sudo $user_name
+else
+user_name=$USER
+fi
+
+echo $user_name
 
 echo "######################  Getting Updates  ######################"
 apt-get update -y && apt-get upgrade -y
@@ -53,7 +72,7 @@ git config --global credential.helper store
 echo "######################  Getting Docker  ######################"
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
-usermod -aG docker $USER
+usermod -aG docker $user_name
 
 echo "######################  Install Oh-my-ZSH  ######################"
 apt install zsh -y
@@ -65,7 +84,7 @@ alias ll="ls -lah"
 
 echo "######################  Cleaning Up  ######################"
 rm requirements.txt
-rm RANDME.md
+rm README.md
 rm package-lock.json
 rm get-docker.sh
 rm -rf node_modules  
