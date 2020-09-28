@@ -50,6 +50,9 @@ alias ll="ls -lah"
 echo "######################  Cleaning Up  ######################"
 rm requirements.txt
 rm RANDME.md
+rm package-lock.json
+rm get-docker.sh
+rm -rf node_modules  
 rm -- "$0"
 
 echo "######################  DONE!!  ######################"
