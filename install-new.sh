@@ -13,6 +13,7 @@ sudo apt-get install snapd -y
 sudo apt-get install git-all -y
 sudo apt-get install wget -y
 sudo apt-get install vim -y
+sudo apt-get install screen -y
 sudo apt-get install python3.8 -y
 sudo apt-get install python3-pip -y
 sudo apt-get install nodejs -y
@@ -28,6 +29,9 @@ sudo snap install discord --classic
 
 echo "######################  Getting Python Packages  ######################"
 pip3 install -r requirements.txt
+
+echo "######################  Getting NPM Packages  ######################"
+npm i express axios concurrently fetch r2 socket.io form-data dotenv brain.js p5 ml5
 
 echo "######################  Doing git stuff  ######################"
 git config --global credential.helper store
