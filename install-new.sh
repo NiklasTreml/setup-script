@@ -6,6 +6,10 @@ echo "######################  Getting Updates  ######################"
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt update
 
+echo "######################  Getting NodeJS  ######################"
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+
 echo "######################  Getting apt packages  ######################"
 sudo apt-get install snapd -y
 sudo apt-get install git-all -y
@@ -17,8 +21,6 @@ sudo apt-get install python3-pip -y
 sudo apt-get install nodejs -y
 
 
-echo "######################  Getting NodeJS  ######################"
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 echo "######################  Getting Snap Packages  ######################"
 sudo snap install code --classic
@@ -26,10 +28,11 @@ sudo snap install spotify --classic
 sudo snap install discord --classic
 
 echo "######################  Getting Python Packages  ######################"
-pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt
 
 echo "######################  Getting NPM Packages  ######################"
-npm i express axios concurrently fetch r2 socket.io form-data dotenv brain.js p5 ml5
+sudo apt-get install -y build-essential
+sudo npm i express axios concurrently fetch r2 socket.io form-data dotenv brain.js p5 ml5
 
 echo "######################  Doing git stuff  ######################"
 git config --global credential.helper store
