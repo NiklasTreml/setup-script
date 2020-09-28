@@ -28,7 +28,14 @@ sudo snap install spotify --classic
 sudo snap install discord --classic
 
 echo "######################  Getting Python Packages  ######################"
-sudo pip3 install flask matplotlib numpy pandas requests scikit-learn seaborn tensorflow #using this instead of the requirements txt, so i can just wget the script
+sudo pip3 install python-dotenv \
+flask matplotlib \
+numpy pandas requests \
+scikit-learn \
+seaborn \
+tensorflow \
+jupyter                                 #using this instead of the requirements txt, so i can just wget the script
+
 
 echo "######################  Getting NPM Packages  ######################"
 sudo apt-get install -y build-essential
