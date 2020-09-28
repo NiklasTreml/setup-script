@@ -13,7 +13,7 @@ or with curl
 # Summary of what this script will do:
 
 ## Important
-This script is intended to be run as root on a fresh install of ubuntu, it will ask for user to create, which will also be added to the group docker.
+This script is intended to be run as root on a fresh install of ubuntu, it will ask for user to create, which will also be added to the group docker. You can also have the script use your active user, it should be added to the neccessary groups anyways
 
 ### Software Installs
 
