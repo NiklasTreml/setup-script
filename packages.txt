@@ -1,0 +1,4 @@
+snapd
+curl
+vim
+python3.8
