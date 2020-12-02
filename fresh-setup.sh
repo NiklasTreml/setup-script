@@ -41,14 +41,27 @@ apt-get install wget -y
 apt-get install curl -y
 apt-get install vim -y
 apt-get install screen -y
-apt-get install python3.8 -y
-apt-get install python3-pip -y
-apt-get install nodejs -y
+
+
 apt install neofetch -y
 apt install bashtop -y
 apt install asbru-cm -y
 
-
+echo "###################### Installing Golang ######################"
+apt install golang-go
+echo "###################### Installing NodeJS ######################"
+apt-get install nodejs -y
+echo "###################### Installing Python3 ######################"
+apt-get install python3.8 -y
+echo "###################### Installing pip ######################"
+apt-get install python3-pip -y
+echo "###################### Installing dotnet-sdk ######################"
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
+apt-get update
+apt-get install -y apt-transport-https
+apt-get update
+apt-get install -y dotnet-sdk-5.0
 
 echo "######################  Getting Snap Packages  ######################"
 snap install code --classic
