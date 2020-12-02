@@ -43,6 +43,7 @@ apt-get install screen -y
 apt-get install python3.8 -y
 apt-get install python3-pip -y
 apt-get install nodejs -y
+apt install neofetch -y
 apt install bashtop -y
 
 
