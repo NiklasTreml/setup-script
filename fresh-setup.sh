@@ -32,6 +32,7 @@ curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
 
 echo "###################### Adding apt repos ######################"
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
+curl -1sLf 'https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.deb.sh' | sudo -E bash
 
 echo "######################  Getting apt packages  ######################"
 apt-get install snapd -y
@@ -45,6 +46,7 @@ apt-get install python3-pip -y
 apt-get install nodejs -y
 apt install neofetch -y
 apt install bashtop -y
+apt install asbru-cm -y
 
 
 
@@ -52,6 +54,7 @@ echo "######################  Getting Snap Packages  ######################"
 snap install code --classic
 snap install spotify --classic
 snap install discord --classic
+snap install postman
 
 echo "######################  Getting Python Packages  ######################"
 pip3 install python-dotenv \
