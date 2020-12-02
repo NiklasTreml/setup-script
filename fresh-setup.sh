@@ -46,12 +46,16 @@ apt install asbru-cm -y
 
 echo "###################### Installing Golang ######################"
 apt install golang-go
+
 echo "###################### Installing NodeJS ######################"
 apt-get install nodejs -y
+
 echo "###################### Installing Python3 ######################"
 apt-get install python3.8 -y
+
 echo "###################### Installing pip ######################"
 apt-get install python3-pip -y
+
 echo "###################### Installing dotnet-sdk ######################"
 wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
@@ -77,7 +81,6 @@ scikit-learn \
 seaborn \
 tensorflow \
 jupyter                                 #using this instead of the requirements txt, so i can just wget the script
-
 
 echo "######################  Getting NPM Packages  ######################"
 apt-get install -y build-essential
