@@ -38,15 +38,15 @@ This script is intended to be run as root on a fresh install of ubuntu, it will 
 - VS Code
 - wget
 ### Python Packages
-- python-dotenv
+- jupyter
 - matplotlib
 - numpy
 - pandas
+- python-dotenv
 - requests
 - scikit-learn
 - seaborn
 - tensorflow 2
-- jupyter
 ### npm Packages
 - express
 - axios
