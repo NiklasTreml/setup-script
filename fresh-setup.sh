@@ -41,8 +41,7 @@ apt-get install wget -y
 apt-get install curl -y
 apt-get install vim -y
 apt-get install screen -y
-
-
+apt-get install aqemu -y
 apt install neofetch -y
 apt install bashtop -y
 apt install asbru-cm -y
