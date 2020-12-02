@@ -62,7 +62,7 @@ This script is intended to be run as root on a fresh install of ubuntu, it will 
 ### Miscellaneous
 - Creates and adds a user to the group `docker`
 - Docker
-- git config --global credential.helper stor
+- git config --global credential.helper store
 - Oh my ZSH
 - ZSH
 ### After the execution the script should delete all the files it created, including itself
