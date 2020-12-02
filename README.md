@@ -60,9 +60,9 @@ This script is intended to be run as root on a fresh install of ubuntu, it will 
 - r2
 - socket.io
 ### Miscellaneous
-- ZSH
-- Oh my ZSH
-- Docker
 - Creates and adds a user to the group `docker`
-- git config --global credential.helper store
+- Docker
+- git config --global credential.helper stor
+- Oh my ZSH
+- ZSH
 ### After the execution the script should delete all the files it created, including itself
