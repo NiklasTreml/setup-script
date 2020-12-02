@@ -17,20 +17,26 @@ This script is intended to be run as root on a fresh install of ubuntu, it will 
 
 ### Software Installs
 
-- apt-get update and apt-get upgrade as well as apt update
+- aqemu
+- asbru-cm
+- bashtop
 - build-essential
-- snap
-- git
-- wget
 - curl
-- vim
-- screen
-- python3.8
-- python3 pip
-- NodeJS
-- VS Code
-- Spotify
 - Discord
+- dotnet SDK
+- git
+- GoLang
+- neofetch
+- NodeJS
+- Postman
+- python3 pip
+- python3.8
+- screen
+- snap
+- Spotify
+- vim
+- VS Code
+- wget
 ### Python Packages
 - python-dotenv
 - matplotlib
