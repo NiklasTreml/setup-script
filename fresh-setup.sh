@@ -98,11 +98,3 @@ usermod -aG docker $user_name
 
 echo "######################  Setting up Aliases  ######################"
 alias ll="ls -lah"
-
-echo "######################  Installing Oh-my-ZSH  and plugins ######################"
-echo "Run zshenv.sh after to get zsh setup and cleanup"
-curl https://raw.githubusercontent.com/NiklasTreml/setup-script/master/zshenv.sh -o zshenv.sh
-chmod 766 zshenv.sh
-
-apt install zsh -y && \
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
