@@ -27,12 +27,10 @@ echo "######################  Getting Updates  ######################"
 apt-get update -y && apt-get upgrade -y
 apt update
 
-echo "######################  Getting NodeJS  ######################"
-curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
-
 echo "###################### Adding apt repos ######################"
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
 curl -1sLf 'https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.deb.sh' | sudo -E bash
+curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
 
 echo "######################  Getting apt packages  ######################"
 apt-get install snapd -y
@@ -41,7 +39,7 @@ apt-get install wget -y
 apt-get install curl -y
 apt-get install vim -y
 apt-get install screen -y
-apt-get install aqemu -y
+apt-get install aqemu -yr
 apt install neofetch -y
 apt install bashtop -y
 apt install asbru-cm -y
