@@ -30,6 +30,8 @@ apt update
 echo "######################  Getting NodeJS  ######################"
 curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
 
+echo "###################### Adding apt repos ######################"
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
 
 echo "######################  Getting apt packages  ######################"
 apt-get install snapd -y
@@ -41,6 +43,7 @@ apt-get install screen -y
 apt-get install python3.8 -y
 apt-get install python3-pip -y
 apt-get install nodejs -y
+apt install bashtop -y
 
 
 
