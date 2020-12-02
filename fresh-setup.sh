@@ -84,7 +84,7 @@ jupyter                                 #using this instead of the requirements 
 
 echo "######################  Getting NPM Packages  ######################"
 apt-get install -y build-essential
-npm i express axios concurrently fetch r2 socket.io form-data dotenv brain.js p5 ml5
+npm i -g nodemon npx concurrently
 
 echo "######################  Doing git stuff  ######################"
 git config --global credential.helper store
@@ -98,3 +98,12 @@ usermod -aG docker $user_name
 
 echo "######################  Setting up Aliases  ######################"
 alias ll="ls -lah"
+
+echo "######################  Cleaning Up  ######################"
+rm requirements.txt
+rm README.md
+rm package-lock.json
+rm get-docker.sh
+rm -rf node_modules  
+rm fresh-setup.sh
+rm -- "$0"

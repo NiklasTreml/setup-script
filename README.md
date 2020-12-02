@@ -48,17 +48,9 @@ This script is intended to be run as root on a fresh install of ubuntu, it will 
 - seaborn
 - tensorflow 2
 ### npm Packages
-- axios
-- brain.js
 - concurrently
-- dotenv
-- express
-- fetch
-- form-data
-- ml5
-- p5
-- r2
-- socket.io
+- nodemon
+- npx
 ### Miscellaneous
 - Creates and adds a user to the group `docker`
 - Docker
