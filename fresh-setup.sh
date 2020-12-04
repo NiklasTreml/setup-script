@@ -28,7 +28,7 @@ apt-get update -y && apt-get upgrade -y
 apt update
 
 echo "###################### Adding apt repos ######################"
-sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo add-apt-repository ppa:bashtop-monitor/bashtop -y
 curl -1sLf 'https://dl.cloudsmith.io/public/asbru-cm/release/cfg/setup/bash.deb.sh' | sudo -E bash
 curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
 
@@ -45,7 +45,7 @@ apt install bashtop -y
 apt install asbru-cm -y
 
 echo "###################### Installing Golang ######################"
-apt install golang-go
+apt install golang-go -y
 
 echo "###################### Installing NodeJS ######################"
 apt-get install nodejs -y
